@@ -12,4 +12,20 @@
 <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
 <h3>@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)</h3>
 
+@if (@Model.JoinEntities.Count == 0)
+{
+  <h3>No machines have been added to this engineer yet.</h3>
+}
+else
+{
+  <h3>@Html.DisplayFor(model => model.Name) is licensed to repair the following machines:</h3>
+  <ul>
+    @foreach (EngineerMachine join in Model.JoinEntities)
+    {
+      <li>@join.Machine.Name</li>
+    }
+  </ul>
+}
+
+<p>@Html.ActionLink("Add a machine to this engineer", "AddMachine", new { id = Model.EngineerId })</p>
 <p>@Html.ActionLink("Back to engineer list", "Index")</p>
