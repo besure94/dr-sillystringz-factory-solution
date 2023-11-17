@@ -1,0 +1,25 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Machine
+@using Factory.Models
+
+<h4>Create a new machine</h4>
+
+<p>@Html.ValidationMessageFor(model => model.Name, "", new { @class="text-danger", @style = "font-weight: 600;" })</p>
+<p>@Html.ValidationMessageFor(model => model.Description, "", new {@class="text-danger", @style = "font-weight: 600;" })</p>
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.Name)
+  @Html.TextBoxFor(model => model.Name)
+  <br>
+  <br>
+  @Html.LabelFor(model => model.Description)
+  @Html.TextBoxFor(model => model.Description)
+  <br>
+  <br>
+  <input type="submit" value="Create machine" class="btn btn-primary"/>
+}
+<br>
+<p>@Html.ActionLink("View machine list", "Index")</p>
