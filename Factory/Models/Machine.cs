@@ -14,6 +14,7 @@ namespace Factory.Models
     [Required(ErrorMessage = "The machine's description can't be empty!")]
     public string Description { get; set; }
     public List<Engineer> Engineers { get; set; }
+    public List<EngineerMachine> JoinEntities { get; }
 
   }
 }
