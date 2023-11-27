@@ -22,6 +22,11 @@ else
     @foreach (EngineerMachine join in Model.JoinEntities)
     {
       <li>@join.Engineer.Name</li>
+      @using (Html.BeginForm("DeleteJoin", "Machines"))
+      {
+        @Html.Hidden("joinId", @join.EngineerMachineId)
+        <input type="submit" value="Delete"/>
+      }
     }
   </ul>
 }
