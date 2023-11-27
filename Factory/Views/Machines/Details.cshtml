@@ -17,7 +17,7 @@
 }
 else
 {
-  <h3>The following engineers are licensed to repair the @Html.DisplayFor(model => model.Name)</h3>
+  <h3>The following engineers are licensed to repair the @Html.DisplayFor(model => model.Name):</h3>
   <ul>
     @foreach (EngineerMachine join in Model.JoinEntities)
     {
@@ -33,3 +33,4 @@ else
 
 <p>@Html.ActionLink("Add an engineer to this machine", "AddEngineer", new { id = Model.MachineId })</p>
 <p>@Html.ActionLink("Back to machine list", "Index")</p>
+<p>@Html.ActionLink("Home", "Index", "Home")</p>
