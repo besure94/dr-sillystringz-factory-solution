@@ -1,7 +1,6 @@
 using Factory.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
-using System.Data.Common;
 using System.Linq;
 
 namespace Factory.Controllers
@@ -9,10 +8,21 @@ namespace Factory.Controllers
   public class HomeController : Controller
   {
 
+    private readonly FactoryContext _db;
+    public HomeController(FactoryContext db)
+    {
+      _db = db;
+    }
+
     [HttpGet("/")]
     public ActionResult Index()
     {
-      return View();
+      Engineer[] engineers = _db.Engineers.ToArray();
+      Machine[] machines = _db.Machines.ToArray();
+      Dictionary<string, object[]> model = new Dictionary<string, object[]>();
+      model.Add("engineers", engineers);
+      model.Add("machines", machines);
+      return View(model);
     }
 
   }
