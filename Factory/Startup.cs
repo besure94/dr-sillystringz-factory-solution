@@ -9,7 +9,6 @@ namespace Factory
     public class Startup
     {
         public IConfigurationRoot Configuration { get; }
-
         public Startup(IWebHostEnvironment env)
         {
             IConfigurationBuilder builder = new ConfigurationBuilder()
@@ -17,12 +16,10 @@ namespace Factory
                 .AddEnvironmentVariables();
             Configuration = builder.Build();
         }
-
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
         }
-
         public void Configure(IApplicationBuilder app)
         {
             app.UseDeveloperExceptionPage();

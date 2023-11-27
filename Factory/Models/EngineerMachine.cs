@@ -1,5 +1,3 @@
-using Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel;
-
 namespace Factory.Models
 {
   public class EngineerMachine

@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.AspNetCore.Http.Features;
 
 namespace Factory.Controllers
 {
@@ -15,13 +14,11 @@ namespace Factory.Controllers
     {
       _db = db;
     }
-
     public ActionResult Index()
     {
       List<Machine> model = _db.Machines.ToList();
       return View(model);
     }
-
     public ActionResult Create()
     {
       return View();
@@ -41,7 +38,6 @@ namespace Factory.Controllers
         return RedirectToAction("Index");
       }
     }
-
     public ActionResult Details(int id)
     {
       Machine thisMachine = _db.Machines
@@ -50,7 +46,6 @@ namespace Factory.Controllers
       .FirstOrDefault(machine => machine.MachineId == id);
       return View(thisMachine);
     }
-
     public ActionResult AddEngineer(int id)
     {
       Machine thisMachine = _db.Machines.FirstOrDefault(machines => machines.MachineId == id);
