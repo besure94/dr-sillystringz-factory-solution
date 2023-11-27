@@ -8,10 +8,10 @@ namespace Factory.Models
   {
     public int EngineerId { get; set; }
 
-    [Required(ErrorMessage = "The engineer's name can't be empty!")]
+    [Required(ErrorMessage = "The Name field is required."), MaxLength(50)]
     public string Name { get; set; }
 
-    [Required(ErrorMessage = "The engineer's description can't be empty!")]
+    [Required(ErrorMessage = "The Description field is required."), MaxLength(250)]
     public string Description { get; set; }
     public Machine Machine { get; set; }
     public List<EngineerMachine> JoinEntities { get; }
