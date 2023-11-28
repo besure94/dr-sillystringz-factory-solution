@@ -13,7 +13,7 @@ namespace Factory.Models
 
     [Required(ErrorMessage = "The Description field is required."), MaxLength(250)]
     public string Description { get; set; }
-    public List<Machine> Machines { get; set; }
     public List<EngineerMachine> JoinEntities { get; }
+
   }
 }
