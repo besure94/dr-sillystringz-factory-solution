@@ -15,11 +15,11 @@
 
 ## Description
 
-This application presents a factory owner with a splash page for their factory. The owner can navigate to `Manage engineers` or `Manage machines` to begin adding engineers and machines to their respective lists.
+This application presents a factory owner with a splash page for their factory. It lists all of the engineers that they employ, and the machines that they are licensed to repair. The owner can navigate to `Manage engineers` or `Manage machines` to begin adding engineers and machines to their respective lists.
 
-To create an engineer, the owner can navigate to a form where they enter a name and description for that engineer. They can then view the engineer's details by selecting it. The engineer's details contain a list of all the machines they are licensed to repair. The owner can add machines to the engineer, and can also edit the engineer's information, or delete the engineer from the application entirely. The owner can also remove individual machines from the list.
+To create an engineer, the owner can navigate to a form where they enter a name and description for that engineer. They can then view the engineer's details by selecting it. The engineer's details contain a list of all the machines they are licensed to repair. The owner can add machines to the engineer, and can also edit the engineer's information, or delete the engineer from the application entirely. The owner can also remove individual machines from the list. There needs to be at least one machine in the application in order for the owner to add a machine to an engineer.
 
-To create a machine, the owner can navigate to a form where they enter a name and description for that machine. They can then view the machine's details by selecting it. The machine's details contain a list of all the engineers that are licensed to repair it. The owner can then add more engineers to the machine, and remove them individually if they wish.
+To create a machine, the owner can navigate to a form where they enter a name and description for that machine. They can then view the machine's details by selecting it. The machine's details contain a list of all the engineers that are licensed to repair it. The owner can then add more engineers to the machine, and remove them individually if they wish. There must be at least one engineer in order for the owner to add an engineer to a machine.
 
 ## Setup Instructions
 
@@ -49,7 +49,7 @@ Install the tools that are introduced in [this series of lessons on LearnHowToPr
 
 ## Known Bugs
 
-Application is functioning as intended.
+Application is fully functional.
 
 ## License
 
