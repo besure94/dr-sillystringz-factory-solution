@@ -42,7 +42,7 @@ Install the tools that are introduced in [this series of lessons on LearnHowToPr
 }
 ```
 
-5. Open your terminal to the production directory called `Factory`, and run `dotnet ef database update`. This will create the database using the migrations located inside the `Migrations` folder.
+5. Open your terminal to the production directory called `Factory`, and run `dotnet ef database update`. This will create the database using the migrations located inside this project's `Migrations` folder. You should now see the database in your MySQL workbench.
     * If you need to create your own migration, run the command `dotnet ef migrations add MigrationName`. The migration name should be specific and in UpperCamelCaseFormat.
 6. Within the production directory called `Factory`, run `dotnet watch run` in the command line to start the project in development mode with a watcher.
 7. Open the browser to [https://localhost:5001](https://localhost:5001). If you cannot access localhost:5001 it is likely because you have not configured a .NET developer security certificate for HTTPS. To learn about this, review this LearnHowToProgram.com lesson: [Redirecting to HTTPS and Issuing a Security Certificate](https://old.learnhowtoprogram.com/fidgetech-3-c-and-net/3-2-basic-web-applications/3-2-0-17-redirecting-to-https-and-issuing-a-security-certificate).
