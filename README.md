@@ -29,7 +29,7 @@ Install the tools that are introduced in [this series of lessons on LearnHowToPr
 
 ### Set Up and Run Project
 
-1. Clone this repository to your desktop.
+1. From GitHub, select the green button that says `Code`, and clone this repository to your desktop.
 2. Open the terminal and navigate to this project's production directory called `Factory`.
 3. Within the production directory `Factory`, create a new file called `appsettings.json`.
 4. Within `appsettings.json`, put in the following code, replacing the `uid` and `pwd` values with your own username and password for MySQL. For the LearnHowToProgram.com lessons, always assume the `uid` is `root` and the `pwd` is `epicodus`. You can use the database name below, or name it whatever you like.
